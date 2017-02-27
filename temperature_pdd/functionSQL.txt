@@ -1,0 +1,23 @@
+
+CREATE FUNCTION donneeMeteoTempBetween(d1 IN DATE, d2 IN DATE)
+	RETURN NUMBER
+	IS temp NUMBER(4,2)
+BEGIN 
+	SELECT m.temperature INTO temp
+	FROM TdonneesMeteo m
+	WHERE date BETWEEN d1 AND d2;
+	RETURN (temp);
+END;
+/
+
+CREATE FUNCTION donneeMeteoTempDate(d IN DATE)
+	RETURN NUMBER
+	IS temp NUMBER(4,2)
+BEGIN 
+	SELECT m.temperature INTO temp
+	FROM TdonneesMeteo m
+	WHERE m.date = d;
+	RETURN (temp);
+END;
+/
+	

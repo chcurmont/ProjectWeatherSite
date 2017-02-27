@@ -1,0 +1,183 @@
+@font-face{
+	font-family:custom_font;
+	src:url(resources/calibri.ttf);
+}
+
+body{
+	margin:0px;
+	font-family:custom_font;
+	background-color:#CFC3C3;
+	min-height:100%;
+}
+
+h1{
+	margin:20px;
+}
+
+h1 a{
+	text-decoration: none;
+	color:black;
+}
+
+h1 a:link, h1 a:visited{
+	text-decoration:none;
+	color:black;
+}
+
+div.main_header{
+	display:inline-block;
+	width: 100%;
+	background-image: linear-gradient(#4B8A08,#5FB404);
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	vertical-align: middle;
+	border-bottom:  3px solid green; 
+}
+
+div.main_header img{
+	margin:20px;
+}
+
+header nav.main_menu{
+	display:flex;
+	justify-content:center;
+	background-color: green;
+}
+div.main_button{
+	text-align:center;
+	width:450px;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color:rgb(75, 138, 8);
+	color:black;
+	font-size:20px;
+}
+
+div.main_button_current{
+	text-align:center;
+	width:450px;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color:green;
+	color:black;
+	font-size:20px;
+}
+
+div.main_button:hover{
+	background-image: linear-gradient(#5FB404, #4B8A08);
+}
+
+nav a:link, a:visited{
+	text-decoration: none;
+	color:black;
+}
+
+div.main_header:nth-child(3){
+
+}
+
+form.login{
+	font-size:20px;
+}
+
+nav.menu{
+	display: flex;
+	align-items: center;
+}
+
+div.header_title{
+	float:left;
+}
+
+div.header_login{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding-right: 20px;
+	margin-top: 10px;
+	align-self: flex-start;
+}
+
+div.button{
+	padding:5px;
+	border-style:solid;
+	border-width:2px;
+	border-color:white;
+	background-color:white;
+	display:none;
+}
+
+#register{
+	margin-top:5px;
+	margin-left:5px;
+	margin-bottom:5px;
+}
+
+div.button a{
+	color:black;
+	font-size:15px;
+}
+
+a:link,a:visited{
+	text-decoration:none;
+	font-weight:normal;
+}
+
+div.button:hover{
+	color:white;
+	text-decoration:none;
+	border-color:greenyellow;
+}
+
+div.main_block{
+	margin-right: 10%;
+	margin-left: 10%;
+	margin-top: 3px;
+	margin-bottom: 10px;
+	display:flex;
+	flex-direction: column;
+}
+
+div.uplevel{
+	border-style: solid;
+	padding-bottom: 10px;
+	border-color: white;
+}
+
+div.graph_block{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+div#graph{
+	border-style:solid;
+	border-width:5px;
+	border-color:black;
+	margin-bottom:10px;
+}
+
+div.data_form{
+	padding:10px;
+	background-color:#5FB404;
+}
+	
+footer{
+	position:relative;
+	background-image: linear-gradient(#5FB404, #4B8A08);
+	text-align:center;
+	bottom:0;
+	width:100%;
+}
+
+div.footer_info{
+	font-size:15px;
+	bottom:0;
+	display:flex;
+	justify-content:center;
+}

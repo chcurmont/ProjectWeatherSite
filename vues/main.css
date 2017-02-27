@@ -1,0 +1,384 @@
+@font-face{
+	font-family:custom_font;
+	src:url(resources/calibri.ttf);
+}
+
+body{
+	margin:0px;
+	font-family:custom_font;
+	background-color:#CFC3C3;
+	min-height:100%;
+}
+
+h1{
+	margin:20px;
+}
+
+h1 a{
+	text-decoration: none;
+	color:black;
+}
+
+h1 a:link, h1 a:visited{
+	text-decoration:none;
+	color:black;
+}
+
+div.main_header{
+	display:inline-block;
+	width: 100%;
+	background-image: linear-gradient(#4B8A08,#5FB404);
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	vertical-align: middle;
+	border-bottom:  3px solid green; 
+}
+
+div.main_header img{
+	margin:20px;
+}
+
+header nav.main_menu{
+	display:flex;
+	justify-content:center;
+	background-color: green;
+}
+div.main_button{
+	text-align:center;
+	width:450px;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color:rgb(75, 138, 8);
+	color:black;
+	font-size:20px;
+}
+
+div.main_button_current{
+	text-align:center;
+	width:450px;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color:green;
+	color:black;
+	font-size:20px;
+}
+
+div.main_button:hover{
+	background-image: linear-gradient(#5FB404, #4B8A08);
+}
+
+nav a:link, a:visited{
+	text-decoration: none;
+	color:black;
+}
+
+div.main_header:nth-child(3){
+
+}
+
+form.login{
+	font-size:20px;
+}
+
+nav.menu{
+	display: flex;
+	align-items: center;
+}
+
+div.header_title{
+	float:left;
+}
+
+div.header_login{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding-right: 20px;
+	margin-top: 10px;
+	align-self: flex-start;
+}
+
+div.button{
+	padding:5px;
+	border-style:solid;
+	border-width:2px;
+	border-color:white;
+	background-color:white;
+	display:none;
+}
+
+#register{
+	margin-top:5px;
+	margin-left:5px;
+	margin-bottom:5px;
+}
+
+div.button a{
+	color:black;
+	font-size:15px;
+}
+
+a:link,a:visited{
+	text-decoration:none;
+	font-weight:normal;
+}
+
+div.button:hover{
+	color:white;
+	text-decoration:none;
+	border-color:greenyellow;
+}
+
+div.main_block{
+	margin-right: 10%;
+	margin-left: 10%;
+	margin-top: 3px;
+	margin-bottom: 10px;
+	display:flex;
+	flex-direction: column;
+}
+
+div#div_switch{
+	background-color:#4B8A08;
+	padding:10px;
+	border-radius:30px;
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	margin-left:40%;
+	margin-right:40%;
+	margin-bottom:10px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left:5px;
+  margin-right:5px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #5FB404;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: green;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px green;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+
+div.uplevel{
+	border-style: solid;
+	padding-bottom: 10px;
+	border-color: white;
+}
+
+div.graph_block{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+div#graph{
+	border-style:solid;
+	border-width:5px;
+	border-color:black;
+	margin-bottom:10px;
+}
+
+div.data_form{
+	position: relative;
+	padding:10px;	
+	display:flex;
+	justify-content:center;
+
+}
+
+#data_period_form,#data_day_form{
+	background-color:#5FB404;
+	width:100%;
+}
+#data_admin_form{
+	position: relative;
+	margin-right: 15%;
+	margin-left: 15%;
+	background-color:grey;
+	border-radius: 10px;
+}
+
+div.info_display{
+	display:flex;
+	flex-direction:column;
+	margin-bottom:10px;
+}
+
+div.data_table{
+	text-align:center;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+div.data_table table{
+	text-align:center;
+	border-collapse:collapse;
+}
+
+div.data_table table th,div.data_table table td{
+	padding:5px;
+}
+
+div.data_table table th{
+	background-color:gray;
+}
+
+div.data_table table tr:hover{
+	background-color:lightgray;
+}
+
+div.admin_panel{
+	margin-left: 15%;
+	margin-right: 15%;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer{
+	position:relative;
+	background-image: linear-gradient(#5FB404, #4B8A08);
+	text-align:center;
+	bottom:0;
+	width:100%;
+}
+
+div.footer_info{
+	font-size:15px;
+	bottom:0;
+	display:flex;
+	justify-content:center;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.inputfile{
+	display: none;
+	overflow: hidden;
+	position:absolute;
+	z-index: -1;
+}
+.inputfile + label {
+    color: black;
+    background-color:grey; 
+    padding:7px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 7px;
+    border-style: solid;
+	border-color: grey;
+	border-width: 1px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+	background-color:#A1A1A1;
+	border-style: solid;
+	border-color: grey;
+	border-width: 1px;
+}
+.inputfile + label {
+	cursor: pointer; /* "hand" cursor */
+}
+.inputfile:focus + label {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+.inputexport,.inputbutton{
+	width: 0.1px;
+	height: 0.1px;
+	display: none;
+	background-color: blue;
+	overflow: hidden;
+	position:absolute;
+	z-index: -1;
+}
+.inputexport + label,.inputbutton + label {
+    color: black;
+    background-color:grey; 
+    padding:7px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 7px;
+    border-style: solid;
+	border-color: grey;
+	border-width: 1px;
+	cursor: pointer; /* "hand" cursor */
+}
+.inputexport:focus + label,
+.inputexport + label:hover ,
+.inputbutton:focus + label,
+.inputbutton + label:hover{
+	background-color:#A1A1A1;
+	border-style: solid;
+	border-color: grey;
+	border-width: 1px;
+}
