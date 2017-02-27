@@ -21,6 +21,7 @@
                     echo("Nom: ".$_SESSION["nom"]."\n");
                     echo("Prénom: ".$_SESSION["prenom"]."\n");
                     echo("<input class=\"input_connexion\" type = \"submit\" value = \"page admin\" />\n");
+                    echo("<a href=\"index.php?action=deconnection\"> Se déconnecter </a>");
                     echo("</form>\n");
                 }
                 else {
@@ -79,7 +80,27 @@
                 <select name="data_type" id="data_type" required>
                     <option value="temperature">Températures</option>
                 </select>
+                <label>Export</label>
+                <input type="checkbox" name="export_ok" value="export_ok">
                 <input type="submit" value="Consulter"/>
+                <?php
+                if (isset($_POST['export_ok'])) {
+                    echo "Fichier exporté";
+                    if(null==fopen('data.csv', 'r+')){
+                        $file=fopen('data.csv','a');
+                    }
+                    else{
+                        $file=fopen('data.csv','r+');
+                    }
+                    fputcsv($file,array("date","temps","temp"));
+                    $i=0;
+                    while ($i<$_SESSION["size"]) {
+                        fputcsv($file,array($_SESSION["date"][$i],$_SESSION["hour"][$i],$_SESSION["value"][$i]));
+                        $i++;
+                    }
+                    fclose($file);
+                }
+                ?>
             </form>
         </div>
 

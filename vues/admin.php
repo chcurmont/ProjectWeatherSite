@@ -18,6 +18,7 @@
                         echo("Nom: ".$_SESSION["nom"]."\n");
                         echo("Prénom: ".$_SESSION["prenom"]."\n");
                         echo("<input class=\"input_connexion\" type = \"submit\" value = \"page admin\" />\n");
+                        echo("<a href=\"index.php?action=deconnection\"> Se déconnecter </a>");
                         echo("</form>\n");
                     }
                     else {

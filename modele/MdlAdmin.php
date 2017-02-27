@@ -9,6 +9,8 @@
 namespace modele;
 
 
+use config\Nettoyer;
+use config\Validation;
 use Exception;
 
 class MdlAdmin

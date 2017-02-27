@@ -31,13 +31,13 @@ class FrontController
             }
             $_REQUEST['action']=$n->nettoyer_string($_REQUEST['action']);
             if(!in_array($_REQUEST['action'],$actions) && !in_array($_REQUEST['action'],$actionsAdmin) && !in_array($_REQUEST['action'],$actionsSU)){
-                $c->erreur('Unknown action: '.$_REQUEST['action']);
+                $c->error('Unknown action: '.$_REQUEST['action']);
                 return;
             }
 
             switch($_REQUEST['action']){
                 case null:
-                    $c->erreur('Unknown action: '.$_REQUEST['action']);
+                    $c->error('Unknown action: '.$_REQUEST['action']);
                     break;
                 case "graph":
                     $c->graph();
@@ -51,26 +51,30 @@ class FrontController
                 case "adminPage":
                     $c->adminPage();
                     break;
+                case "home":
+                    $c->home();
+                    break;
                 default:
-                    $c->erreur('Not implemented action: '.$_REQUEST['action']);
+                    $c->error('Not implemented action: '.$_REQUEST['action']);
                     break;
             }
         }
         elseif($_SESSION['role']=='superuser'){
             $c = new SuperUserController();
             if(!isset($_REQUEST['action'])){
-                $c->home;
+                $c->home();
                 return;
             }
             $_REQUEST['action']=$n->nettoyer_string($_REQUEST['action']);
             if(!in_array($_REQUEST['action'],$actionsSU) && !in_array($_REQUEST['action'],$actions)){
-                $c->erreur('Unknown action: '.$_REQUEST['action']);
+                $c->error('Unknown action: '.$_REQUEST['action']);
                 return;
             }
 
             switch($_REQUEST['action']){
                 case null:
-                    $c->erreur('Unknown action: '.$_REQUEST['action']);
+                    $c->error('Unknown action: '.$_REQUEST['action']);
+                    break;
                 case "graph":
                     $c->graph();
                     break;
@@ -83,8 +87,11 @@ class FrontController
                 case "adminPage":
                     $c->adminPage();
                     break;
+                case "home":
+                    $c->home();
+                    break;
                 default:
-                    $c->erreur('Not implemented action: '.$_REQUEST['action']);
+                    $c->error('Not implemented action: '.$_REQUEST['action']);
                     break;
             }
         }
@@ -96,7 +103,7 @@ class FrontController
             }
             $_REQUEST['action']=$n->nettoyer_string($_REQUEST['action']);
             if(!in_array($_REQUEST['action'],$actions)){
-                $c->erreur('Unknown action: '.$_REQUEST['action']);
+                $c->error('Unknown action: '.$_REQUEST['action']);
                 return;
             }
             switch($_REQUEST['action']){

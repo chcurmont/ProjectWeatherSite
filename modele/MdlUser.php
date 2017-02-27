@@ -180,9 +180,9 @@ class MdlUser
 
             if(!count($error)>0){
                 foreach($result as $current_result){
-                    $_SESSION["date"][]=$current_result.getDate();
-                    $_SESSION["hour"][]=$current_result.getHeure();
-                    $_SESSION["value"][]=$current_result.getData();
+                    $_SESSION["date"][]=$current_result->getDate();
+                    $_SESSION["hour"][]=$current_result->getHeure();
+                    $_SESSION["value"][]=$current_result->getData();
                     $_SESSION["mean"]=$_SESSION["mean"]+$current_result->getData();
                     $number_values++;
                 }
