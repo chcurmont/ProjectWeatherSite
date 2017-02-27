@@ -51,7 +51,11 @@ class UserController
                     $logG = $m->connection();
                 }
             }
-            header("index.php?action=".$vue);
+            if (isset($vue)) {
+                require($dir.$vues[$vue]);
+            } else {
+                $vue = 'home';
+            }
         }
         catch(Exception $e){
             $err=$e->getMessage();

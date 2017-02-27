@@ -17,12 +17,14 @@
             <div style="margin-bottom: 10px;">
                 <?php
                 if(isset($_SESSION['login']) && isset($_SESSION['role']) && isset($_SESSION['nom']) && isset($_SESSION['prenom']) && isset($_SESSION['utilisateur'])){
-                    echo("login:".$_SESSION['login']);
-                    echo(" nom: ".$_SESSION['nom']);
-                    echo(" prénom: ".$_SESSION['prenom']);
+                    echo("<form class=\"login\" method = \"post\" action = \"index.php?action=adminPage\">\n");
+                    echo("Nom: ".$_SESSION["nom"]."\n");
+                    echo("Prénom: ".$_SESSION["prenom"]."\n");
+                    echo("<input class=\"input_connexion\" type = \"submit\" value = \"page admin\" />\n");
+                    echo("</form>\n");
                 }
                 else {
-                    $vue = 'data';
+                    $vue = 'home';
                     echo("<form class=\"login\" method = \"post\" action = \"index.php?action=connection\" >\n");
                     echo("Login:<input class = \"input1\" type = \"text\" name = \"login\" value = \"login\"/>\n");
                     echo("Password:<input class = \"input2\" type = \"password\" name = \"pwd\" value = \"password\"/>\n");

@@ -29,7 +29,6 @@ class MdlUser
             $_SESSION['nom'] = $logG->getNom();
             $_SESSION['utilisateur'] = $logG;
             $_SESSION['prenom'] = $logG->getPrenom();
-            echo("hello");
         }
         return $logG;
     }
