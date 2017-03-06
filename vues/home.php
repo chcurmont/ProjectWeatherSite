@@ -52,7 +52,13 @@
 			<p>
 				Ce site a été développé dans le cadre d'un projet tutoré de deuxième année à l'IUT d'Informatique des Cézeaux à Clermont-Ferrand (63).
 			</p>
-		</div>
+            <?php
+            if(isset($statut) and isset($temp)) {
+                echo("<img height=100px width=100px src=\"vues/resources/img/weatherIcon/".$statut.".png\" >");
+                echo("Température: " . $temp . "°C");
+            }
+            ?>
+        </div>
 		<footer>
 			<div class="footer_info">
 				<p>

@@ -39,3 +39,5 @@ $actionsSU[]='graph';
 $actionsSU[]='data';
 $actionsSU[]='deconnection';
 $actionsSU[]='adminPage';
+
+$URL_API = "http://query.yahooapis.com/v1/public/yql";

@@ -3,7 +3,9 @@
 namespace controller;
 
 
+use DAL\LogGateway;
 use modele\MdlAdmin;
+use modele\MdlUser;
 
 class AdminController
 {
@@ -28,7 +30,12 @@ class AdminController
     public function home()
     {
         $this->checkAdmin();
-        global $dir, $vues;
+        global $dir, $vues,$URL_API;
+        $m=new MdlAdmin();
+        $data = $m->home($URL_API);
+        $statut = $data->query->results->channel->item->condition->code;
+        if($statut>47 or $statut<0) $statut = 3200;
+        $temp = intval((intval($data->query->results->channel->item->condition->temp)-32)/1.800);
         require($dir . $vues['home']);
     }
 
@@ -63,6 +70,9 @@ class AdminController
     public function disconnect(){
         try{
             $this->checkAdmin();
+            global $db_host,$db_name,$db_login,$db_password;
+            $lg = new LogGateway($db_host,$db_name,$db_login,$db_password);
+            $lg->insertData($_SESSION['login'],"Déconnexion de l'utilisateur.");
             session_unset();
             session_destroy();
             header('Location: index.php');

@@ -35,18 +35,16 @@ class DonneesmeteoGateway
 
     public function selectDay($data_type,$D1, $D2){
         try {
-            $query = "select id,noDep,date,heure,:data_type from tdonneesmeteo where (date >= :date_debut and date <= :date_debut)";
+            $query = "select id, noDep, date, heure, ".$data_type." from tdonneesmeteo where (date >= :date_debut and date <= :date_debut)";
             $this->con->executeQuery($query, array(
-                ':data_type' => array($data_type,PDO::PARAM_STR),
                 ':date_debut' => array($D1, PDO::PARAM_STR),
                 ':date_fin' => array($D2, PDO::PARAM_STR)
             ));
             $rep=$this->con->getResults();
-            $ligne=[];
             $i=0;
             $res=[];
             foreach($rep as $ligne){
-                $res[$i]=new \metier\Donneesmeteo($ligne['id'],$ligne['noDep'],$ligne['date'],$ligne['heure'],$ligne["$data_type"]);
+                $res[$i]=new \metier\Donneesmeteo($ligne['id'],$ligne['noDep'],$ligne['date'],$ligne['heure'],$ligne[$data_type]);
                 $i=$i+1;
             }
             if($res!=[]){

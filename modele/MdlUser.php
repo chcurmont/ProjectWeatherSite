@@ -11,6 +11,8 @@ namespace modele;
 
 use config\Nettoyer;
 use config\Validation;
+use DAL\LogGateway;
+use DAL\WeatherAPIGateway;
 use Exception;
 
 class MdlUser
@@ -29,6 +31,9 @@ class MdlUser
             $_SESSION['nom'] = $logG->getNom();
             $_SESSION['utilisateur'] = $logG;
             $_SESSION['prenom'] = $logG->getPrenom();
+
+            $lg = new LogGateway($db_host,$db_name,$db_login,$db_password);
+            $lg->insertData($_SESSION['login'],"Connexion de l'utilisateur.");
         }
         return $logG;
     }
@@ -207,5 +212,10 @@ class MdlUser
 
             $_SESSION["size"]=count($_SESSION["value"]);
         }
+    }
+
+    public function home($URL){
+        $g  = new WeatherAPIGateway($URL);
+        return $g->lireAPI();
     }
 }

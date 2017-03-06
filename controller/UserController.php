@@ -19,7 +19,12 @@ class UserController
      *
      */
     public function home(){
-        global $dir,$vues;
+        global $dir,$vues,$URL_API;
+        $m=new MdlUser();
+        $data = $m->home($URL_API);
+        $statut = $data->query->results->channel->item->condition->code;
+        if($statut>47 or $statut<0) $statut = 3200;
+        $temp = intval((intval($data->query->results->channel->item->condition->temp)-32)/1.800);
         require($dir.$vues['home']);
     }
 
@@ -51,11 +56,7 @@ class UserController
                     $logG = $m->connection();
                 }
             }
-            if (isset($vue)) {
-                require($dir.$vues[$vue]);
-            } else {
-                $vue = 'home';
-            }
+            header('location: index.php');
         }
         catch(Exception $e){
             $err=$e->getMessage();

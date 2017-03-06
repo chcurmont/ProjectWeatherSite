@@ -11,6 +11,7 @@ namespace modele;
 
 use config\Nettoyer;
 use config\Validation;
+use DAL\WeatherAPIGateway;
 use Exception;
 
 class MdlAdmin
@@ -193,5 +194,9 @@ class MdlAdmin
 
     public function adminPage(){
 
+    }
+    public function home($URL){
+        $g  = new WeatherAPIGateway($URL);
+        return $g->lireAPI();
     }
 }
