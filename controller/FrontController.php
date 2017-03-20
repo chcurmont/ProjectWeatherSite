@@ -122,6 +122,9 @@ class FrontController
                 case "home":
                     $c->home();
                     break;
+                case "register":
+                    $c->register();
+                    break;
                 default:
                     $c->error('Not implemented action: '.$_REQUEST['action']);
                     break;
