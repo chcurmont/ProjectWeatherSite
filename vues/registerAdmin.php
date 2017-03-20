@@ -28,12 +28,10 @@
                     echo("Login:<input class = \"input1\" type = \"text\" name = \"login\" value = \"login\"/>\n");
                     echo("Password:<input class = \"input2\" type = \"password\" name = \"pwd\" value = \"password\"/>\n");
                     echo("<input class = \"input_connexion\" type = \"submit\" value = \"Se connecter\" />\n");
+                    echo("<a href=\"index.php?action=register\">S'inscrire</a>");
                     echo("</form >\n");
                 }
                 ?>
-            </div>
-            <div id="register" class="button">
-                <a href="index.php?action=register">S'inscrire</a>
             </div>
         </div>
     </div>
@@ -43,21 +41,19 @@
         <div class="main_button"><a href="index.php?action=graph">Graphiques</a></div>
     </nav>
 </header>
-  <div class="main_block">
-    <div class="col-lg-8">
-        <p style="font-family: Agency FB; font-size: 2.0em; padding-left:30px;">      OOOOOUPS !!</p>
-        <br><br>
-          <?php
-          var_dump($err);
-          ?>
-        <br><br>
-    </div>
-    <div>
-        <h4> Nous sommes désolé, l'action que vous avez entrepris a aboutie sur une erreur.</h4>
-        <h3> Cette partie peut être toujours en développement ou l'erreur est seulement temporaire. Veuillez réessayer.</h3>
-        </br></br></br></br></br></br></br></br></br></br></br></br></br>
-    </div>
-  </div>
+<?php
+if($utilisateurs!=[]){
+    echo("<ul>");
+    foreach ($utilisateurs as $utilisateur){
+        echo($utilisateur);
+        echo("<form method = \"post\" action = \"index.php?action=ValiderUtilisateur\">\n");
+        $_SESSION['utilisateurAEnregistrer'] = $utilisateur;
+        echo("input type = \"submit\" value = 0");
+        echo("</form>");
+        echo("<a href = \"index.php?action=refuser&idRefuse=".$utilisateur->getIdUtilisateur()."\" >Refusé </a>");
+    }
+}
+?>
 <footer>
     <div class="footer_info">
         <p>

@@ -45,8 +45,8 @@
 				<div class="main_button_current"><a href="index.php?action=graph">Graphiques</a></div>
 			</nav>
 		</header>
-        <div class="main_block">
-            <div class="graph_block">
+    <div class="main_block">
+          <div class="graph_block">
                 <h2>Graphique</h2>
                 <div id="div_switch">
                     <div>Journée</div>
@@ -70,73 +70,69 @@
 
                     }
                 </script>
-                <div id="graph" <?php echo $_SESSION["is_graph_empty"]?>>
-                </div>
-                <div class="data_form" id="data_day_form">
-                    <form method="post" action="index.php?action=graph">
+          </div>
+          <div class="data_form" id="data_day_form">
+                <form method="post" action="index.php?action=graph">
                         <label>Pour un jour</label>
                         <label for="date">Date : </label>
-                        <input type="date" name="date_debut" id="date_debut" required/>
-                        <input type="date" name="date_fin" value="0001-01-01" hidden/>
+                        <input class="date" type="date" name="date_debut" id="date_debut" min="2009-01-01" max="2010-12-31" required/>
+                        <input class="date" type="date" name="date_fin" value="0001-01-01" hidden/>
                         <label for="data_type">Type de données : </label>
-                        <select name="data_type" id="data_type" required>
+                        <select class="selection" name="data_type" id="data_type" required>
                             <option value="temperature">Températures</option>
                         </select>
-                        <input type="submit" value="Consulter"/>
-                    </form>
-                </div>
-
-                <div class="data_form" id="data_period_form" style="display:none;">
-                    <form method="post" action="index.php?acton=graph">
+                        <input class="selection" type="submit" value="Consulter"/>
+                </form>
+          </div>
+          <div class="data_form" id="data_period_form" style="display:none;">
+                <form method="post" action="index.php?acton=graph">
                         <label>Pour une période</label>
                         <label for="date">Depuis : </label>
-                        <input type="date" name="date_debut" id="date_debut" required/>
+                        <input class="date" type="date" name="date_debut" id="date_debut" min="2009-01-01" max="2010-12-31" required/>
                         <label for="date">Jusque : </label>
-                        <input type="date" name="date_fin" id="date_fin" required/>
+                        <input class="date" type="date" name="date_fin" id="date_fin" min="2009-01-01" max="2010-12-31" required/>
                         <label for="data_type">Type de données : </label>
-                        <select name="data_type" id="data_type" required>
+                        <select class="selection" name="data_type" id="data_type" required>
                             <option value="temperature">Températures</option>
                         </select>
-                        <input type="submit" value="Consulter"/>
-                    </form>
-                </div>
+                        <input class="selection" type="submit" value="Consulter"/>
+                </form>
             </div>
-        </div>
+    </div>
 		<script>
 			<?php
                 echo 'var is_graph_empty='.$_SESSION["is_graph_empty"];
+            ?>
 
-			?>;
-		
-			if(is_graph_empty==0){
+            if(is_graph_empty==0){
 				var trace1 = {
 					x: <?php echo $_SESSION["x_axis_string"]?>,
 					y: <?php echo display_array_for_jploty_graph($_SESSION["y_axis"],"float")?>,
 					type: 'line',
 					name : 'valeurs'
 				};
-				
+
 				var trace2 = {
 					x: <?php echo $_SESSION["x_axis_string"]?>,
 					y: <?php echo $_SESSION["mean_array_string"]?>,
 					type : 'line',
 					name : 'moyenne'
 				};
-				
+
 				var trace3 = {
 					x: <?php echo $_SESSION["x_axis_string"]?>,
 					y: <?php echo $_SESSION["min_array_string"]?>,
 					type : 'line',
 					name : 'minimum'
 				};
-				
+
 				var trace4 = {
 					x: <?php echo $_SESSION["x_axis_string"]?>,
 					y: <?php echo $_SESSION["max_array_string"]?>,
 					type : 'line',
 					name : 'maximum'
 				};
-				
+
 				var data = [trace1,trace2,trace3,trace4];
 			}
 

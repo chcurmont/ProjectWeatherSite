@@ -46,128 +46,128 @@
     </nav>
 </header>
 <div class="main_block">
-    <div class="graph_block">
-        <h2>Donnees</h2>
-        <div id="div_switch">
-            <div>Journée</div>
-            <label class="switch" >
-                <input id="input_switch" type="checkbox" onclick="click_switch()">
-                <div class="slider round"></div>
-            </label>
-            <div>Période</div>
-        </div>
-        <script>
-            function click_switch(){
-                var x=document.getElementById("input_switch").checked;
-                if (x) {
-                    document.getElementById("data_day_form").style.display="none";
-                    document.getElementById("data_period_form").style.display="flex";
-                }
-                else{
-                    document.getElementById("data_day_form").style.display="flex";
-                    document.getElementById("data_period_form").style.display="none";
-                }
+  <div class="graph_block">
+          <h2>Donnees</h2>
+          <div id="div_switch">
+              <div>Journée</div>
+              <label class="switch" >
+                  <input id="input_switch" type="checkbox" onclick="click_switch()">
+                  <div class="slider round"></div>
+              </label>
+              <div>Période</div>
+          </div>
+          <script>
+              function click_switch(){
+                  var x=document.getElementById("input_switch").checked;
+                  if (x) {
+                      document.getElementById("data_day_form").style.display="none";
+                      document.getElementById("data_period_form").style.display="flex";
+                  }
+                  else{
+                      document.getElementById("data_day_form").style.display="flex";
+                      document.getElementById("data_period_form").style.display="none";
+                  }
 
-            }
-        </script>
-        <div class="data_form" id="data_day_form">
-            <form method="post" action="index.php?action=data">
-                <label>Pour un jour</label>
-                <label for="date">Date : </label>
-                <input type="date" name="date_debut" id="date_debut" required/>
-                <input type="date" name="date_fin" value="0001-01-01" hidden/>
-                <label for="data_type">Type de données : </label>
-                <select name="data_type" id="data_type" required>
-                    <option value="temperature">Températures</option>
-                </select>
-                <label>Export</label>
-                <input type="checkbox" name="export_ok" value="export_ok">
-                <input type="submit" value="Consulter"/>
-                <?php
-                if (isset($_POST['export_ok'])) {
-                    echo "Fichier exporté";
-                    if(null==fopen('data.csv', 'r+')){
-                        $file=fopen('data.csv','a');
-                    }
-                    else{
-                        $file=fopen('data.csv','r+');
-                    }
-                    fputcsv($file,array("date","temps","temp"));
-                    $i=0;
-                    while ($i<$_SESSION["size"]) {
-                        fputcsv($file,array($_SESSION["date"][$i],$_SESSION["hour"][$i],$_SESSION["value"][$i]));
-                        $i++;
-                    }
-                    fclose($file);
-                }
-                ?>
-            </form>
-        </div>
+              }
+          </script>
+          <div class="data_form" id="data_day_form">
+              <form method="post" action="index.php?action=data">
+                  <label>Pour un jour</label>
+                  <label for="date">Date : </label>
+                  <input class="date" type="date" name="date_debut" id="date_debut" min="2009-01-01" max="2010-12-31" required/>
+                  <input class="date" type="date" name="date_fin" value="0001-01-01" hidden/>
+                  <label for="data_type">Type de données : </label>
+                  <select class="selection" name="data_type" id="data_type" required>
+                      <option value="temperature">Températures</option>
+                  </select>
+                  <label>Export</label>
+                  <input type="checkbox" name="export_ok" value="export_ok">
+                  <input class="date" type="submit" value="Consulter"/>
+                  <?php
+                  if (isset($_POST['export_ok'])) {
+                      echo "Fichier exporté";
+                      if(null==fopen('data.csv', 'r+')){
+                          $file=fopen('data.csv','a');
+                      }
+                      else{
+                          $file=fopen('data.csv','r+');
+                      }
+                      fputcsv($file,array("date","temps","temp"));
+                      $i=0;
+                      while ($i<$_SESSION["size"]) {
+                          fputcsv($file,array($_SESSION["date"][$i],$_SESSION["hour"][$i],$_SESSION["value"][$i]));
+                          $i++;
+                      }
+                      fclose($file);
+                  }
+                  ?>
+              </form>
+          </div>
 
-        <div class="data_form" id="data_period_form" style="display:none;">
-            <form method="post" action="index.php?action=data">
-                <label>Pour une période</label>
-                <label for="date">Depuis : </label>
-                <input type="date" name="date_debut" id="date_debut" required/>
-                <label for="date">Jusque : </label>
-                <input type="date" name="date_fin" id="date_fin" required/>
-                <label for="data_type">Type de données : </label>
-                <select name="data_type" id="data_type" required>
-                    <option value="temperature">Températures</option>
-                </select>
-                <input type="submit" value="Consulter"/>
-            </form>
-        </div>
+          <div class="data_form" id="data_period_form" style="display:none;">
+              <form method="post" action="index.php?action=data">
+                  <label>Pour une période</label>
+                  <label for="date">Depuis : </label>
+                  <input class="date" type="date" name="date_debut" id="date_debut" min="2009-01-01" max="2010-12-31" required/>
+                  <label for="date">Jusque : </label>
+                  <input class="date" type="date" name="date_fin" id="date_fin" min="2009-01-01" max="2010-12-31" required/>
+                  <label for="data_type">Type de données : </label>
+                  <select name="data_type" id="data_type" required>
+                      <option value="temperature">Températures</option>
+                  </select>
+                  <input class="date" type="submit" value="Consulter"/>
+              </form>
+          </div>
 
-        <?php
-        if(isset($_SESSION["table_title"])){
-            ?>
+          <?php
+          if(isset($_SESSION["table_title"])){
+              ?>
 
-            <div class="data_table" <?php echo $_SESSION["is_table_empty"]?>>
-                <h3><?php echo $_SESSION["table_title"]?></h3>
-                <div class="info_display">
-                    <label style="color:green">Moyenne : <?php echo $_SESSION["mean"]?></label>
-                    <label style="color:red">Maximum : <?php echo $_SESSION["max"]?></label>
-                    <label style="color:blue">Minimum : <?php echo $_SESSION["min"]?></label>
-                </div>
-                <table>
-                    <tr>
-                        <th>
-                            Date
-                        </th>
-                        <th>
-                            Heure
-                        </th>
-                        <th>
-                            <?php echo ucfirst($_SESSION["data_type"])?>
-                        </th>
-                    </tr>
-                    <?php
-                    $i=0;
+              <div class="data_table" <?php echo $_SESSION["is_table_empty"]?>>
+                  <h3><?php echo $_SESSION["table_title"]?></h3>
+                  <div class="info_display">
+                      <label style="color:green">Moyenne : <?php echo $_SESSION["mean"]?></label>
+                      <label style="color:red">Maximum : <?php echo $_SESSION["max"]?></label>
+                      <label style="color:blue">Minimum : <?php echo $_SESSION["min"]?></label>
+                  </div>
+                  <table>
+                      <tr>
+                          <th>
+                              Date
+                          </th>
+                          <th>
+                              Heure
+                          </th>
+                          <th>
+                              <?php echo ucfirst($_SESSION["data_type"])?>
+                          </th>
+                      </tr>
+                      <?php
+                      $i=0;
 
-                    while($i<$_SESSION["size"]){
-                        ?>
-                        <tr>
-                            <td>
-                                <?php echo $_SESSION["date"][$i]?>
-                            </td>
-                            <td>
-                                <?php echo $_SESSION["hour"][$i]?>
-                            </td>
-                            <td>
-                                <?php echo $_SESSION["value"][$i]?>
-                            </td>
-                        </tr>
-                        <?php
-                        $i++;
-                    }
-                    ?>
-                </table>
-            </div>
-            <?php
-        }
-        ?>
-    </div>
+                      while($i<$_SESSION["size"]){
+                          ?>
+                          <tr>
+                              <td>
+                                  <?php echo $_SESSION["date"][$i]?>
+                              </td>
+                              <td>
+                                  <?php echo $_SESSION["hour"][$i]?>
+                              </td>
+                              <td>
+                                  <?php echo $_SESSION["value"][$i]?>
+                              </td>
+                          </tr>
+                          <?php
+                          $i++;
+                      }
+                      ?>
+                  </table>
+              </div>
+              <?php
+          }
+          ?>
+      </div>
 </div>
 <footer>
     <div class="footer_info">

@@ -44,7 +44,15 @@
 			</nav>
 		</header>
 		<div class="main_block">
-			<h2>Accueil</h2>
+			<div class="meteo_seven">
+				<!--script type="text/javascript"-->
+
+					<div id="cont_a320e8cbb5c1b6199137a5bcde9235e2">
+						<script type="text/javascript" async src="https://www.tameteo.com/wid_loader/a320e8cbb5c1b6199137a5bcde9235e2">
+						</script>
+					</div>
+				<!--/script-->
+		</div>
 			<h3>Informations</h3>
 			<p>
 				Bienvenue sur Morpheo Stats ! Ce site constitue un outil d'étude statistiques météorologiques qui vous permettra de consulter (soit directement, soit sous forme de graphes) des données météorologiques recueillies au sommet du Puy-de-Dôme.
@@ -53,12 +61,13 @@
 				Ce site a été développé dans le cadre d'un projet tutoré de deuxième année à l'IUT d'Informatique des Cézeaux à Clermont-Ferrand (63).
 			</p>
             <?php
-            if(isset($statut) and isset($temp)) {
-                echo("<img height=100px width=100px src=\"vues/resources/img/weatherIcon/".$statut.".png\" >");
-                echo("Température: " . $temp . "°C");
-            }
+	            if(isset($statut) and isset($temp)) {
+	                echo("<img height=100px width=100px src=\"vues/resources/img/weatherIcon/".$statut.".png\" >");
+	                echo("Température: " . $temp . "°C");
+	            }
             ?>
-        </div>
+				</br></br></br></br></br></br>
+  		</div>
 		<footer>
 			<div class="footer_info">
 				<p>
