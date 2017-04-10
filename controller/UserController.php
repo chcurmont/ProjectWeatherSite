@@ -88,14 +88,24 @@ class UserController
     }
 
     public function register(){
+<<<<<<< HEAD
         global $vues,$dir;
         if(!isset($_REQUEST['idRegister'])){
             require($dir.$vues['register']);
+=======
+        global $vue,$dir;
+        if(!isset($_REQUEST['idRegister'])){
+            require($dir.$vue['register']);
+>>>>>>> origin/master
         }
         else{
             $m = new MdlUser();
             $m->register();
+<<<<<<< HEAD
             require($dir.$vues['home']);
+=======
+            require($dir.$vue['home']);
+>>>>>>> origin/master
         }
     }
 }

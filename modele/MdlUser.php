@@ -39,7 +39,11 @@ class MdlUser
         return $logG;
     }
 
+<<<<<<< HEAD
     static function display_array_for_jploty_graph($to_display, $type)
+=======
+    function display_array_for_jploty_graph($to_display, $type)
+>>>>>>> origin/master
     {
         $to_return = "";
         $to_return = $to_return . "[";
@@ -224,6 +228,7 @@ class MdlUser
 
     public function register(){
         global $db_host,$db_name,$db_login,$db_password;
+<<<<<<< HEAD
         if(isset($_REQUEST['idRegister']))
             $id = Nettoyer::nettoyer_string($_REQUEST['idRegister']);
         else $id = "user";
@@ -243,5 +248,22 @@ class MdlUser
             return $res;
         }
         else throw new Exception("Erreur paramètre invalide."."\n".$v->validateInt($inscritAlerte));
+=======
+        $id = Nettoyer::nettoyer_string($_REQUEST['idRegister']);
+        $nom = Nettoyer::nettoyer_string($_REQUEST['nameRegister']);
+        $prenom = Nettoyer::nettoyer_string($_REQUEST['prenomRegister']);
+        $sexe = Nettoyer::nettoyer_string($_REQUEST['sexeRegister']);
+        $adresse = Nettoyer::nettoyer_string($_REQUEST['adresse']);
+        $password = Nettoyer::nettoyer_string($_REQUEST['passwordRegister']);
+        $mail = Nettoyer::nettoyer_email($_REQUEST['mailRegister']);
+        $inscritAlerte = Nettoyer::nettoyer_int($_REQUEST['inscritAlerte']);
+        $v = new Validation();
+        $g = new UtilisateurTmpGateway($db_host,$db_name,$db_login,$db_password);
+        if($v->validateEmail($mail) and $v->validateAlnumLongueur($id,15) and $v->validateAlnumLongueur($adresse,200) and $v->validateAlnumLongueur($nom,20) and $v->validateAlnumLongueur($prenom,20) and $v->validateAlnumLongueur($sexe,1) and $v->validateAlnumLongueur($password,500) and $v->validateInt($inscritAlerte)){
+            $res = $g->insertUtilisateur($id,$nom,$prenom,$sexe,$mail,$adresse,$password,$inscritAlerte);
+            return $res;
+        }
+        else throw new Exception("Erreur paramètre invalide.");
+>>>>>>> origin/master
     }
 }

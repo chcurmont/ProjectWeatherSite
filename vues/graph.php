@@ -85,7 +85,11 @@
                 </form>
           </div>
           <div class="data_form" id="data_period_form" style="display:none;">
+<<<<<<< HEAD
                 <form method="post" action="index.php?action=graph">
+=======
+                <form method="post" action="index.php?acton=graph">
+>>>>>>> origin/master
                         <label>Pour une période</label>
                         <label for="date">Depuis : </label>
                         <input class="date" type="date" name="date_debut" id="date_debut" min="2009-01-01" max="2010-12-31" required/>
@@ -99,7 +103,10 @@
                 </form>
             </div>
     </div>
+<<<<<<< HEAD
         <div id = "graph">
+=======
+>>>>>>> origin/master
 		<script>
 			<?php
                 echo 'var is_graph_empty='.$_SESSION["is_graph_empty"];

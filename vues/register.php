@@ -42,18 +42,31 @@
     </nav>
 </header>
 <form class="register" method = "post" action = "index.php?action=register">
+<<<<<<< HEAD
     <p>Login: </p><input class = "input3" type = "text" name = "idRegister" value = "Votre identifiant" required/>
     <p>Nom: </p><input class = "input4" type = "text" name = "nameRegister" value = "Votre nom" required/>
     <p>Prenom: </p><input class = "input5" type ="text" name = "prenomRegister" value = "Votre prénom" required/>
     <p>Sexe(Optionnel): </p><select name = "sexeRegister" required>
+=======
+    <p>Login: </p><input class = "input3" type = "text" name = "idRegister" value = "idRegister" required/>
+    <p>Nom: </p><input class = "input4" type = "text" name = "nameRegister" value = "nameRegister" required/>
+    <p>Prenom: </p><input class = "input5" type ="text" name = "prenomRegister" value = "prenomRegister" required/>
+    <p>Sexe(Optionnel): </p><select name = "sexeRegister">
+>>>>>>> origin/master
         <option value = "u" selected>Undefined</option>
         <option value = "m">Homme</option>
         <option value = "f">Femme</option>
     </select>
+<<<<<<< HEAD
     <p>Mail: </p><input class = "input6" type = "email" name = "mailRegister" value = "Votre mail" required/>
     <p>Adresse: </p><input class = "input7" type = "text" name = "adresseRegister" value = "Votre adresse" required/>
     <p>Mot de passe: </p><input class = "input8" type = "password" name = "passwordRegister" value ="" required/>
     <p>Inscrit alerte: </p><input class = "input9" type = "checkbox" name = "inscritAlerte" value = "0"/>
+=======
+    <p>Mail: </p><input class = "input6" type = "email" name = "mailRegister" value = "mailRegister" required/>
+    <p>Mot de passe: </p><input class = "input7" type = "password" name = "passwordRegister" value ="passwordRegister" required/>
+    <p>Inscrit alerte: </p><input class = "input8" type = "checkbox" name = "inscritAlerte" value = 1 />
+>>>>>>> origin/master
     <input class = "input_register" type ="submit" value = "utilisateurAEnregistrer"/>
 </form>
 <footer>

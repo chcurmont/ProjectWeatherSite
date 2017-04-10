@@ -9,8 +9,11 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/vues/dataTMP.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vues/resources/img/weatherIcon/1.png" afterPath="$PROJECT_DIR$/vues/resources/img/weatherIcon/1.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAL/DonneesmeteoGateway.php" afterPath="$PROJECT_DIR$/DAL/DonneesmeteoGateway.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/Validation.php" afterPath="$PROJECT_DIR$/config/Validation.php" />
+=======
+>>>>>>> origin/master
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/FrontController.php" afterPath="$PROJECT_DIR$/controller/FrontController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/UserController.php" afterPath="$PROJECT_DIR$/controller/UserController.php" />
@@ -52,6 +55,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="MdlUser.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modele/MdlUser.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -60,20 +64,37 @@
               <folding>
                 <element signature="e#110#130#0#PHP" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="Utilisateurtmp.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/metier/Utilisateurtmp.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4114">
+              <caret line="247" column="5" lean-forward="false" selection-start-line="247" selection-start-column="5" selection-end-line="247" selection-end-column="5" />
+              <folding />
+>>>>>>> origin/master
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="Validation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/Validation.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
               <caret line="12" column="46" lean-forward="false" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+=======
+      <file leaf-file-name="registerAdmin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vues/registerAdmin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="884">
+              <caret line="52" column="114" lean-forward="false" selection-start-line="52" selection-start-column="114" selection-end-line="52" selection-end-column="114" />
+>>>>>>> origin/master
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="DonneesmeteoGateway.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DAL/DonneesmeteoGateway.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -90,6 +111,16 @@
             <state relative-caret-position="1530">
               <caret line="97" column="30" lean-forward="false" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
               <folding />
+=======
+      <file leaf-file-name="MdlUser.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modele/MdlUser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="739">
+              <caret line="147" column="47" lean-forward="true" selection-start-line="147" selection-start-column="47" selection-end-line="147" selection-end-column="47" />
+              <folding>
+                <element signature="e#110#130#0#PHP" expanded="true" />
+              </folding>
+>>>>>>> origin/master
             </state>
           </provider>
         </entry>
@@ -97,58 +128,106 @@
       <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="289">
               <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+=======
+            <state relative-caret-position="85">
+              <caret line="101" column="59" lean-forward="false" selection-start-line="101" selection-start-column="59" selection-end-line="101" selection-end-column="59" />
+>>>>>>> origin/master
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vues/home.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="578">
               <caret line="34" column="51" lean-forward="false" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
               <folding />
+=======
+      <file leaf-file-name="MdlAdmin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modele/MdlAdmin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="100" column="59" lean-forward="false" selection-start-line="100" selection-start-column="59" selection-end-line="100" selection-end-column="59" />
+              <folding>
+                <element signature="e#110#130#0#PHP" expanded="true" />
+              </folding>
+>>>>>>> origin/master
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="FrontController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/FrontController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2227">
               <caret line="134" column="40" lean-forward="false" selection-start-line="134" selection-start-column="40" selection-end-line="134" selection-end-column="40" />
+=======
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/UserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="35" column="27" lean-forward="true" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+>>>>>>> origin/master
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="data.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vues/data.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1360">
               <caret line="80" column="20" lean-forward="false" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+=======
+      <file leaf-file-name="data.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vues/data.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="71" column="19" lean-forward="false" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
+>>>>>>> origin/master
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vues/register.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="935">
               <caret line="55" column="103" lean-forward="false" selection-start-line="55" selection-start-column="103" selection-end-line="55" selection-end-column="103" />
+=======
+      <file leaf-file-name="graph.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vues/graph.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2278">
+              <caret line="134" column="0" lean-forward="true" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+>>>>>>> origin/master
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="graph.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vues/graph.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1581">
               <caret line="93" column="73" lean-forward="false" selection-start-line="93" selection-start-column="73" selection-end-line="93" selection-end-column="73" />
+=======
+      <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vues/register.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="969">
+              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="65" selection-end-column="7" />
+>>>>>>> origin/master
               <folding />
             </state>
           </provider>
@@ -193,14 +272,25 @@
         <option value="$PROJECT_DIR$/metier/Utilisateur.php" />
         <option value="$PROJECT_DIR$/metier/Ville.php" />
         <option value="$PROJECT_DIR$/metier/Villeutilisateur.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/metier/Donneesmeteo.php" />
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/vues/main.css" />
         <option value="$PROJECT_DIR$/vues/index.php" />
+=======
+        <option value="$PROJECT_DIR$/controller/FrontController.php" />
+        <option value="$PROJECT_DIR$/metier/Donneesmeteo.php" />
+        <option value="$PROJECT_DIR$/DAL/DonneesmeteoGateway.php" />
+        <option value="$PROJECT_DIR$/config/config.php" />
+        <option value="$PROJECT_DIR$/vues/main.css" />
+        <option value="$PROJECT_DIR$/vues/index.php" />
+        <option value="$PROJECT_DIR$/controller/UserController.php" />
+>>>>>>> origin/master
         <option value="$PROJECT_DIR$/DAL/UserGateway.php" />
         <option value="$PROJECT_DIR$/DAL/UtilisateurTmpGateway.php" />
         <option value="$PROJECT_DIR$/vues/erreur.php" />
         <option value="$PROJECT_DIR$/metier/Utilisateurtmp.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/vues/home.php" />
         <option value="$PROJECT_DIR$/vues/registerAdmin.php" />
         <option value="$PROJECT_DIR$/modele/MdlSuperUser.php" />
@@ -213,6 +303,16 @@
         <option value="$PROJECT_DIR$/vues/register.php" />
         <option value="$PROJECT_DIR$/config/Validation.php" />
         <option value="$PROJECT_DIR$/modele/MdlUser.php" />
+=======
+        <option value="$PROJECT_DIR$/vues/register.php" />
+        <option value="$PROJECT_DIR$/vues/home.php" />
+        <option value="$PROJECT_DIR$/vues/registerAdmin.php" />
+        <option value="$PROJECT_DIR$/modele/MdlUser.php" />
+        <option value="$PROJECT_DIR$/modele/MdlSuperUser.php" />
+        <option value="$PROJECT_DIR$/modele/MdlAdmin.php" />
+        <option value="$PROJECT_DIR$/vues/graph.php" />
+        <option value="$PROJECT_DIR$/vues/data.php" />
+>>>>>>> origin/master
       </list>
     </option>
   </component>
@@ -245,6 +345,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -361,7 +462,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -487,13 +587,20 @@
       <workItem from="1489366560578" duration="11480000" />
       <workItem from="1489663857815" duration="1742000" />
       <workItem from="1489980831503" duration="6675000" />
+<<<<<<< HEAD
       <workItem from="1490862299619" duration="14988000" />
       <workItem from="1491824444703" duration="4000" />
+=======
+>>>>>>> origin/master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="150895000" />
+=======
+    <option name="totallyTimeSpent" value="135903000" />
+>>>>>>> origin/master
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -547,6 +654,16 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/temperature_pdd/config.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="138" column="27" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> origin/master
     <entry file="file://$PROJECT_DIR$/temperature_pdd/temp_pdd2009.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -572,6 +689,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+<<<<<<< HEAD
+=======
+          <folding>
+            <element signature="e#7#89#0#PHP" expanded="false" />
+            <element signature="e#106#120#0#PHP" expanded="false" />
+          </folding>
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -579,6 +703,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
           <caret line="43" column="30" lean-forward="false" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -593,6 +721,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+<<<<<<< HEAD
+=======
+          <folding>
+            <element signature="e#7#89#0#PHP" expanded="false" />
+            <element signature="e#106#120#0#PHP" expanded="false" />
+          </folding>
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -642,6 +777,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="24" lean-forward="false" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -680,6 +819,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/SplClassLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="63" />
+          <folding>
+            <element signature="e#7#988#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metier/Log.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="892">
+          <caret line="90" column="61" lean-forward="false" selection-start-line="90" selection-start-column="61" selection-end-line="90" selection-end-column="61" />
+          <folding>
+            <element signature="e#27#49#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/metier/Region.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1360">
@@ -701,6 +860,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/metier/Utilisateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="262" column="61" lean-forward="false" selection-start-line="262" selection-start-column="61" selection-end-line="262" selection-end-column="61" />
+          <folding>
+            <element signature="e#27#49#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/metier/Ville.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -712,6 +881,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1139">
           <caret line="67" column="61" lean-forward="false" selection-start-line="67" selection-start-column="61" selection-end-line="67" selection-end-column="61" />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -756,11 +926,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="739">
           <caret line="96" column="50" lean-forward="false" selection-start-line="96" selection-start-column="50" selection-end-line="96" selection-end-column="50" />
+=======
+          <folding>
+            <element signature="e#28#50#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vues/erreur.php">
+    <entry file="file://$PROJECT_DIR$/metier/Donneesmeteo.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6035">
+          <caret line="356" column="5" lean-forward="false" selection-start-line="356" selection-start-column="5" selection-end-line="356" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAL/DonneesmeteoGateway.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="57" column="74" lean-forward="false" selection-start-line="57" selection-start-column="74" selection-end-line="57" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/Nettoyer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="34" lean-forward="false" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+>>>>>>> origin/master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vues/index.css" />
+    <entry file="file://$PROJECT_DIR$/vues/index.php" />
+    <entry file="file://$PROJECT_DIR$/controller/FrontController.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
@@ -813,23 +1022,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1581">
           <caret line="93" column="73" lean-forward="false" selection-start-line="93" selection-start-column="73" selection-end-line="93" selection-end-column="73" />
+=======
+        <state relative-caret-position="663">
+          <caret line="42" column="32" lean-forward="false" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vues/data.php">
+    <entry file="file://$PROJECT_DIR$/vues/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="80" column="20" lean-forward="false" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="17">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vues/home.php">
+    <entry file="file://$PROJECT_DIR$/DAL/UserGateway.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="51" lean-forward="false" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
-          <folding />
+        <state relative-caret-position="153">
+          <caret line="28" column="60" lean-forward="false" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
+          <folding>
+            <marker date="1488177081835" expanded="true" signature="788:836" ph="delete from " />
+            <marker date="1488177081835" expanded="true" signature="1208:1258" ph="select * fro... tutilisateur" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAL/UtilisateurTmpGateway.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="96" column="50" lean-forward="false" selection-start-line="96" selection-start-column="50" selection-end-line="96" selection-end-column="50" />
+          <folding>
+            <element signature="e#24#38#0#PHP" expanded="true" />
+            <marker date="1489395417413" expanded="true" signature="475:512" ph="select count... tutilisateurtmp" />
+            <marker date="1489395417413" expanded="true" signature="758:788" ph="select * fro... tutilisateurtmp" />
+            <marker date="1489395417413" expanded="true" signature="1431:1485" ph="delete from " />
+            <marker date="1489395417413" expanded="true" signature="1764:1792" ph="delete from " />
+            <marker date="1489395417413" expanded="true" signature="2029:2085" ph="select * fro... tutilisateurstmp" />
+            <marker date="1489395417413" expanded="true" signature="2665:2766" ph="insert into tutilisateurstmp... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -837,26 +1067,85 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/vues/data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="80" column="20" lean-forward="false" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+=======
+    <entry file="file://$PROJECT_DIR$/vues/erreur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> origin/master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vues/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="578">
+          <caret line="34" column="51" lean-forward="false" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+=======
+        <state relative-caret-position="493">
+          <caret line="29" column="119" lean-forward="false" selection-start-line="29" selection-start-column="119" selection-end-line="29" selection-end-column="119" />
+>>>>>>> origin/master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+=======
+    <entry file="file://$PROJECT_DIR$/vues/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="65" selection-end-column="7" />
+>>>>>>> origin/master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="97" column="30" lean-forward="false" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
+=======
+    <entry file="file://$PROJECT_DIR$/metier/Utilisateurtmp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4114">
+          <caret line="247" column="5" lean-forward="false" selection-start-line="247" selection-start-column="5" selection-end-line="247" selection-end-column="5" />
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/DAL/DonneesmeteoGateway.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="37" column="135" lean-forward="false" selection-start-line="37" selection-start-column="135" selection-end-line="37" selection-end-column="135" />
+=======
+    <entry file="file://$PROJECT_DIR$/vues/registerAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="114" lean-forward="false" selection-start-line="52" selection-start-column="114" selection-end-line="52" selection-end-column="114" />
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/DAL/WeatherAPIGateway.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -868,18 +1157,68 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="935">
           <caret line="55" column="103" lean-forward="false" selection-start-line="55" selection-start-column="103" selection-end-line="55" selection-end-column="103" />
+=======
+    <entry file="file://$PROJECT_DIR$/controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="35" column="27" lean-forward="true" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/modele/MdlUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="147" column="47" lean-forward="true" selection-start-line="147" selection-start-column="47" selection-end-line="147" selection-end-column="47" />
+          <folding>
+            <element signature="e#110#130#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/MdlSuperUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="101" column="59" lean-forward="false" selection-start-line="101" selection-start-column="59" selection-end-line="101" selection-end-column="59" />
+>>>>>>> origin/master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/config/Validation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="46" lean-forward="false" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+=======
+    <entry file="file://$PROJECT_DIR$/modele/MdlAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="100" column="59" lean-forward="false" selection-start-line="100" selection-start-column="59" selection-end-line="100" selection-end-column="59" />
+          <folding>
+            <element signature="e#110#130#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vues/graph.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2278">
+          <caret line="134" column="0" lean-forward="true" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../../../GitHub/site-meteo/modele/MdlUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1479">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> origin/master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/modele/MdlUser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="742">
@@ -887,6 +1226,13 @@
           <folding>
             <element signature="e#110#130#0#PHP" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/vues/data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="71" column="19" lean-forward="false" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
+          <folding />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>

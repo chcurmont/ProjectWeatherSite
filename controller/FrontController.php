@@ -132,7 +132,43 @@ class FrontController
         }
         catch(\Exception $e){
             $c = new UserController();
+<<<<<<< HEAD
             $c->error($e->getMessage());
+=======
+            if (!isset($_REQUEST['action'])) {
+                $c->home();
+                return;
+            }
+            $_REQUEST['action']=$n->nettoyer_string($_REQUEST['action']);
+            if(!in_array($_REQUEST['action'],$actions)){
+                $c->error('Unknown action: '.$_REQUEST['action']);
+                return;
+            }
+            switch($_REQUEST['action']){
+                case null:
+                    $c->home();
+                    break;
+                case "data":
+                    $c->data();
+                    break;
+                case "graph":
+                    $c->graph();
+                    break;
+                case "connection":
+                    $c->connection();
+                    break;
+                case "home":
+                    $c->home();
+                    break;
+                case "register":
+                    $c->register();
+                    break;
+                default:
+                    $c->error('Not implemented action: '.$_REQUEST['action']);
+                    break;
+            }
+        }
+>>>>>>> origin/master
     }
 }
 }
