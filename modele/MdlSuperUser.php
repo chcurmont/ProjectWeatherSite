@@ -99,8 +99,8 @@ class MdlSuperUser
             if(!count($error)>0){
                 foreach($result as $current_result){
                     $_SESSION["x_axis"][] =$current_result->getDate().'/'.$current_result->getHeure();
-                    $_SESSION["y_axis"][]=$current_result.getData();
-                    $mean=$mean+$current_result.getData();
+                    $_SESSION["y_axis"][]=$current_result->getData();
+                    $mean=$mean+$current_result->getData();
                     $number_values++;
                 }
 
@@ -118,10 +118,10 @@ class MdlSuperUser
 
             $size=count($_SESSION["x_axis"]);
 
-            $_SESSION["x_axis_string"]=display_array_for_jploty_graph($_SESSION["x_axis"],"string");
-            $_SESSION["mean_array_string"]=display_constant_as_array($mean,$size);
-            $_SESSION["max_array_string"]=display_constant_as_array($max,$size);
-            $_SESSION["min_array_string"]=display_constant_as_array($min,$size);
+            $_SESSION["x_axis_string"]=$this->display_array_for_jploty_graph($_SESSION["x_axis"],"string");
+            $_SESSION["mean_array_string"]=$this->display_constant_as_array($mean,$size);
+            $_SESSION["max_array_string"]=$this->display_constant_as_array($max,$size);
+            $_SESSION["min_array_string"]=$this->display_constant_as_array($min,$size);
         }
     }
 
@@ -164,9 +164,9 @@ class MdlSuperUser
 
             if(!count($error)>0){
                 foreach($result as $current_result){
-                    $_SESSION["date"][]=$current_result.getDate();
-                    $_SESSION["hour"][]=$current_result.getHeure();
-                    $_SESSION["value"][]=$current_result.getData();
+                    $_SESSION["date"][]=$current_result->getDate();
+                    $_SESSION["hour"][]=$current_result->getHeure();
+                    $_SESSION["value"][]=$current_result->getData();
                     $_SESSION["mean"]=$_SESSION["mean"]+$current_result->getData();
                     $number_values++;
                 }
@@ -177,7 +177,7 @@ class MdlSuperUser
                     $_SESSION["min"]=0;
                 }
                 else{
-                    $mean=$_SESSION["mean"]/$number_values;
+                    $_SESSION["mean"]=round($_SESSION["mean"]/$number_values,1);
                     $_SESSION["max"]=max($_SESSION["value"]);
                     $_SESSION["min"]=min($_SESSION["value"]);
                 }

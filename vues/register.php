@@ -28,12 +28,10 @@
                     echo("Login:<input class = \"input1\" type = \"text\" name = \"login\" value = \"login\"/>\n");
                     echo("Password:<input class = \"input2\" type = \"password\" name = \"pwd\" value = \"password\"/>\n");
                     echo("<input class = \"input_connexion\" type = \"submit\" value = \"Se connecter\" />\n");
+                    echo("<a href=\"index.php?action=register\">S'inscrire</a>");
                     echo("</form >\n");
                 }
                 ?>
-            </div>
-            <div id="register" class="button">
-                <a href="index.php?action=register">S'inscrire</a>
             </div>
         </div>
     </div>
@@ -43,21 +41,21 @@
         <div class="main_button"><a href="index.php?action=graph">Graphiques</a></div>
     </nav>
 </header>
-  <div class="main_block">
-    <div class="col-lg-8">
-        <p style="font-family: Agency FB; font-size: 2.0em; padding-left:30px;">      OOOOOUPS !!</p>
-        <br><br>
-          <?php
-          var_dump($err);
-          ?>
-        <br><br>
-    </div>
-    <div>
-        <h4> Nous sommes désolé, l'action que vous avez entrepris a aboutie sur une erreur.</h4>
-        <h3> Cette partie peut être toujours en développement ou l'erreur est seulement temporaire. Veuillez réessayer.</h3>
-        </br></br></br></br></br></br></br></br></br></br></br></br></br>
-    </div>
-  </div>
+<form class="register" method = "post" action = "index.php?action=register">
+    <p>Login: </p><input class = "input3" type = "text" name = "idRegister" value = "Votre identifiant" required/>
+    <p>Nom: </p><input class = "input4" type = "text" name = "nameRegister" value = "Votre nom" required/>
+    <p>Prenom: </p><input class = "input5" type ="text" name = "prenomRegister" value = "Votre prénom" required/>
+    <p>Sexe(Optionnel): </p><select name = "sexeRegister" required>
+        <option value = "u" selected>Undefined</option>
+        <option value = "m">Homme</option>
+        <option value = "f">Femme</option>
+    </select>
+    <p>Mail: </p><input class = "input6" type = "email" name = "mailRegister" value = "Votre mail" required/>
+    <p>Adresse: </p><input class = "input7" type = "text" name = "adresseRegister" value = "Votre adresse" required/>
+    <p>Mot de passe: </p><input class = "input8" type = "password" name = "passwordRegister" value ="" required/>
+    <p>Inscrit alerte: </p><input class = "input9" type = "checkbox" name = "inscritAlerte" value = "0"/>
+    <input class = "input_register" type ="submit" value = "utilisateurAEnregistrer"/>
+</form>
 <footer>
     <div class="footer_info">
         <p>

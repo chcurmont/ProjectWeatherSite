@@ -12,6 +12,7 @@ namespace modele;
 use config\Nettoyer;
 use config\Validation;
 use DAL\LogGateway;
+use DAL\UtilisateurTmpGateway;
 use DAL\WeatherAPIGateway;
 use Exception;
 
@@ -21,7 +22,7 @@ class MdlUser
     {
         global $db_host, $db_login, $db_name, $db_password;
         $g = new \DAL\UserGateway($db_host, $db_name, $db_login, $db_password);
-        $logG=$g->selectUtilisateurId($_REQUEST['login']);
+        $logG = $g->selectUtilisateurId($_REQUEST['login']);
         if (!isset($logG)) {
             throw new Exception("erreur utilisateur introuvable");
         }
@@ -32,44 +33,46 @@ class MdlUser
             $_SESSION['utilisateur'] = $logG;
             $_SESSION['prenom'] = $logG->getPrenom();
 
-            $lg = new LogGateway($db_host,$db_name,$db_login,$db_password);
-            $lg->insertData($_SESSION['login'],"Connexion de l'utilisateur.");
+            $lg = new LogGateway($db_host, $db_name, $db_login, $db_password);
+            $lg->insertData($_SESSION['login'], "Connexion de l'utilisateur.");
         }
         return $logG;
     }
 
-    function display_array_for_jploty_graph($to_display,$type){
-        $to_return="";
-        $to_return=$to_return."[";
-        foreach($to_display as $current_value){
-            if($type=="string"){
-                $to_return=$to_return."\"";
+    static function display_array_for_jploty_graph($to_display, $type)
+    {
+        $to_return = "";
+        $to_return = $to_return . "[";
+        foreach ($to_display as $current_value) {
+            if ($type == "string") {
+                $to_return = $to_return . "\"";
             }
-            $to_return=$to_return.$current_value;
-            if($type=="string"){
-                $to_return=$to_return."\"";
+            $to_return = $to_return . $current_value;
+            if ($type == "string") {
+                $to_return = $to_return . "\"";
             }
-            $to_return=$to_return.",";
+            $to_return = $to_return . ",";
         }
-        $to_return=$to_return."]";
+        $to_return = $to_return . "]";
 
         return $to_return;
     }
 
-    function display_constant_as_array($mean,$size){
-        $i=0;
+    function display_constant_as_array($mean, $size)
+    {
+        $i = 0;
 
-        $to_return="";
-        $to_return=$to_return.'['.$mean;
+        $to_return = "";
+        $to_return = $to_return . '[' . $mean;
 
         $i++;
 
-        while($i<$size){
-            $to_return=$to_return.','.$mean;
+        while ($i < $size) {
+            $to_return = $to_return . ',' . $mean;
             $i++;
         }
 
-        $to_return=$to_return.']';
+        $to_return = $to_return . ']';
 
         return $to_return;
     }
@@ -120,8 +123,8 @@ class MdlUser
             if(!count($error)>0){
                 foreach($result as $current_result){
                     $_SESSION["x_axis"][] =$current_result->getDate().'/'.$current_result->getHeure();
-                    $_SESSION["y_axis"][]=$current_result.getData();
-                    $mean=$mean+$current_result.getData();
+                    $_SESSION["y_axis"][]=$current_result->getData();
+                    $mean=$mean+$current_result->getData();
                     $number_values++;
                 }
 
@@ -139,10 +142,10 @@ class MdlUser
 
             $size=count($_SESSION["x_axis"]);
 
-            $_SESSION["x_axis_string"]=display_array_for_jploty_graph($_SESSION["x_axis"],"string");
-            $_SESSION["mean_array_string"]=display_constant_as_array($mean,$size);
-            $_SESSION["max_array_string"]=display_constant_as_array($max,$size);
-            $_SESSION["min_array_string"]=display_constant_as_array($min,$size);
+            $_SESSION["x_axis_string"]=$this->display_array_for_jploty_graph($_SESSION["x_axis"],"string");
+            $_SESSION["mean_array_string"]=$this->display_constant_as_array($mean,$size);
+            $_SESSION["max_array_string"]=$this->display_constant_as_array($max,$size);
+            $_SESSION["min_array_string"]=$this->display_constant_as_array($min,$size);
         }
     }
 
@@ -198,7 +201,7 @@ class MdlUser
                     $_SESSION["min"]=0;
                 }
                 else{
-                    $mean=$_SESSION["mean"]/$number_values;
+                    $_SESSION["mean"]=round($_SESSION["mean"]/$number_values,1);
                     $_SESSION["max"]=max($_SESSION["value"]);
                     $_SESSION["min"]=min($_SESSION["value"]);
                 }
@@ -217,5 +220,28 @@ class MdlUser
     public function home($URL){
         $g  = new WeatherAPIGateway($URL);
         return $g->lireAPI();
+    }
+
+    public function register(){
+        global $db_host,$db_name,$db_login,$db_password;
+        if(isset($_REQUEST['idRegister']))
+            $id = Nettoyer::nettoyer_string($_REQUEST['idRegister']);
+        else $id = "user";
+        $nom = Nettoyer::nettoyer_string($_REQUEST['nameRegister']);
+        $prenom = Nettoyer::nettoyer_string($_REQUEST['prenomRegister']);
+        $sexe = Nettoyer::nettoyer_string($_REQUEST['sexeRegister']);
+        $adresse = Nettoyer::nettoyer_string($_REQUEST['adresseRegister']);
+        $password = Nettoyer::nettoyer_string($_REQUEST['passwordRegister']);
+        $mail = Nettoyer::nettoyer_email($_REQUEST['mailRegister']);
+        if(!isset($_REQUEST['inscritAlerte']))
+            $inscritAlerte = 1;
+        else $inscritAlerte = Nettoyer::nettoyer_int(intval($_REQUEST['inscritAlerte']));
+        $v = new Validation();
+        $g = new UtilisateurTmpGateway($db_host,$db_name,$db_login,$db_password);
+        if($v->validateAlnumLongueur($id,15) and $v->validateAlnumLongueur($adresse,200) and $v->validateAlnumLongueur($nom,20) and $v->validateAlnumLongueur($prenom,20) and $v->validateAlnumLongueur($sexe,1) and $v->validateAlnumLongueur($password,500) and $v->validateInt($inscritAlerte)){
+            $res = $g->insertUtilisateur($id,$nom,$prenom,$sexe,$mail,$adresse,$password,$inscritAlerte);
+            return $res;
+        }
+        else throw new Exception("Erreur paramètre invalide."."\n".$v->validateInt($inscritAlerte));
     }
 }

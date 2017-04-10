@@ -12,27 +12,27 @@
 				<a href="index.php"><img width="100px" src="vues/resources/img/logo.png" alt="Logo du site"/></a>
 				<div class="header_title"><h1><a href="index.php">Morpheo Stats</a></h1></div>
 				<div class="header_login">
-                    <?php
-                    if(isset($_SESSION['login']) && isset($_SESSION['role']) && isset($_SESSION['nom']) && isset($_SESSION['prenom']) && isset($_SESSION['utilisateur'])){
-                        echo("<form class=\"login\" method = \"post\" action = \"index.php?action=adminPage\">\n");
-                        echo("Nom: ".$_SESSION["nom"]."\n");
-                        echo("Prénom: ".$_SESSION["prenom"]."\n");
-                        echo("<input class=\"input_connexion\" type = \"submit\" value = \"page admin\" />\n");
-                        echo("<a href=\"index.php?action=deconnection\"> Se déconnecter </a>");
-                        echo("</form>\n");
-                    }
-                    else {
-                        $vue = 'home';
-                        echo("<form class=\"login\" method = \"post\" action = \"index.php?action=connection\" >\n");
-                        echo("Login:<input class = \"input1\" type = \"text\" name = \"login\" value = \"login\"/>\n");
-                        echo("Password:<input class = \"input2\" type = \"password\" name = \"pwd\" value = \"password\"/>\n");
-                        echo("<input class = \"input_connexion\" type = \"submit\" value = \"Se connecter\" />\n");
-                        echo("</form >\n");
-                    }
-                    ?>
-					<div id="register" class="button">
-						<a href="index.php?action=register">S'inscrire</a>
-					</div>
+                    <div style="margin-bottom: 10px;">
+                        <?php
+                        if(isset($_SESSION['login']) && isset($_SESSION['role']) && isset($_SESSION['nom']) && isset($_SESSION['prenom']) && isset($_SESSION['utilisateur'])){
+                            echo("<form class=\"login\" method = \"post\" action = \"index.php?action=adminPage\">\n");
+                            echo("Nom: ".$_SESSION["nom"]."\n");
+                            echo("Prénom: ".$_SESSION["prenom"]."\n");
+                            echo("<input class=\"input_connexion\" type = \"submit\" value = \"page admin\" />\n");
+                            echo("<a href=\"index.php?action=deconnection\"> Se déconnecter </a>");
+                            echo("</form>\n");
+                        }
+                        else {
+                            $vue = 'home';
+                            echo("<form class=\"login\" method = \"post\" action = \"index.php?action=connection\" >\n");
+                            echo("Login:<input class = \"input1\" type = \"text\" name = \"login\" value = \"login\"/>\n");
+                            echo("Password:<input class = \"input2\" type = \"password\" name = \"pwd\" value = \"password\"/>\n");
+                            echo("<input class = \"input_connexion\" type = \"submit\" value = \"Se connecter\" />\n");
+                            echo("<a href=\"index.php?action=register\">S'inscrire</a>");
+                            echo("</form >\n");
+                        }
+                        ?>
+                    </div>
 				</div>
 			</div>
 			<nav class="main_menu">

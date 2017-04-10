@@ -15,6 +15,7 @@ $vues['graph']='vues/graph.php';
 $vues['admin']='vues/admin.php';
 $vues['indexCss']='vues/main.css';
 $vues['index']='index.php';
+$vues['register']='vues/register.php';
 
 $vue='home';
 
@@ -25,6 +26,7 @@ $actions[]='home';
 $actions[]='graph';
 $actions[]='data';
 $actions[]='connection';
+$actions[]='register';
 
 $actionsAdmin=[];
 $actionsAdmin[]='home';

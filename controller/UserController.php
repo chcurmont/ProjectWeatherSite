@@ -86,4 +86,16 @@ class UserController
         $m->data();
         require($dir.$vues['data']);
     }
+
+    public function register(){
+        global $vues,$dir;
+        if(!isset($_REQUEST['idRegister'])){
+            require($dir.$vues['register']);
+        }
+        else{
+            $m = new MdlUser();
+            $m->register();
+            require($dir.$vues['home']);
+        }
+    }
 }

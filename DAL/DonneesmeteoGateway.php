@@ -35,7 +35,7 @@ class DonneesmeteoGateway
 
     public function selectDay($data_type,$D1, $D2){
         try {
-            $query = "select id, noDep, date, heure, ".$data_type." from tdonneesmeteo where (date >= :date_debut and date <= :date_debut)";
+            $query = "select id, noDep, date, heure, ".$data_type." from tdonneesmeteo where (date >= :date_debut and date <= :date_fin)";
             $this->con->executeQuery($query, array(
                 ':date_debut' => array($D1, PDO::PARAM_STR),
                 ':date_fin' => array($D2, PDO::PARAM_STR)

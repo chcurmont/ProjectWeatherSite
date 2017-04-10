@@ -10,8 +10,7 @@ class Validation
      */
     public function validateInt($val)
     {
-        $val = filter_var($val, FILTER_VALIDATE_INT);
-        return ($val !== FALSE);
+        return preg_match("#^[0-9]{1,}$#",$val);
     }
 
     /**
